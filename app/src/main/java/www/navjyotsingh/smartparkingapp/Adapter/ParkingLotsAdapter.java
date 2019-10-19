@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import www.navjyotsingh.smartparkingapp.ParkingDescription;
 import www.navjyotsingh.smartparkingapp.ParkingMapsActivity;
 import www.navjyotsingh.smartparkingapp.R;
 import www.navjyotsingh.smartparkingapp.fragment.ParkingLot_Model;
@@ -41,7 +42,7 @@ public class ParkingLotsAdapter extends RecyclerView.Adapter<ParkingLotsAdapter.
         holder.parking_spot_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, ParkingMapsActivity.class));
+                context.startActivity(new Intent(context, ParkingDescription.class));
             }
         });
     }
