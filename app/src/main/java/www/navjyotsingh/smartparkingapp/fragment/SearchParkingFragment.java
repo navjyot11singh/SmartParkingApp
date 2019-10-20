@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 import java.util.ArrayList;
 
@@ -21,10 +25,14 @@ public class SearchParkingFragment extends Fragment {
     private ParkingLotsAdapter parkingLotsAdapter;
     private LinearLayoutManager layoutManager;
 
+    CarouselView carouselView;
+    int[] sampleImages = {R.drawable.b1,R.drawable.b2,R.drawable.b3,R.drawable.b4};
+
     private ArrayList<ParkingLot_Model> arrayList= new ArrayList<>();
     public SearchParkingFragment() {
         // Required empty public constructor
     }
+
 
 
     @Override
@@ -33,26 +41,40 @@ public class SearchParkingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_search_parking, container, false);
         init(view);
-        fakeList();
+        setCrouserView();
+        fakeList();;
+
         setParkingRecycler();
         return view;
     }
-//-------------fake list ---------------------
-    private void fakeList() {
-        ParkingLot_Model parkingLot_model = new ParkingLot_Model(R.drawable.ic_launcher_foreground,"","","");
 
-        arrayList.add(parkingLot_model);
-        arrayList.add(parkingLot_model);
-        arrayList.add(parkingLot_model);
-        arrayList.add(parkingLot_model);
-        arrayList.add(parkingLot_model);
-        arrayList.add(parkingLot_model);
+    private void setCrouserView() {
+        carouselView.setPageCount(sampleImages.length);
+
+        carouselView.setImageListener(new ImageListener() {
+            @Override
+            public void setImageForPosition(int position, ImageView imageView) {
+                imageView.setImageResource(sampleImages[position]);
+            }
+        });
+    }
+
+    //-------------fake list ---------------------
+    private void fakeList() {
+
+        arrayList.add(new ParkingLot_Model(R.drawable.p,"Janakpuri","Wz 4488 near metro fjdkjfkjfnkfd","2.5 km from your home"));
+        arrayList.add(new ParkingLot_Model(R.drawable.p1,"Uttan","uttan nagar near metrofdfdflkdnklfdlkfmdlkfndkf","0.5 km from your home"));
+        arrayList.add(new ParkingLot_Model(R.drawable.p2,"MultiFLoor","J block Paschim vihar fmdnfljkd flkdnflkd","1.23 km from your home"));
+        arrayList.add(new ParkingLot_Model(R.drawable.p3,"District","Dwarka 201f lfmd flkdfkmsdlfmd","8.4 km from your home"));
+        arrayList.add(new ParkingLot_Model(R.drawable.p4,"Basement","Wz 4488 near metro.kdfmlkdmflmfl;smf","12.4 km from your home"));
 
     }
 
 //    ----------------initialisg views here---------------
     private void init(View view){
         parkingListRecyclerView = view.findViewById(R.id.parkingListRecyclerView);
+        carouselView = view.findViewById(R.id.carouselView);
+
     }
 
 //    ------------------setting up list here----------------

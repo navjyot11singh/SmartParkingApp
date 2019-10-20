@@ -17,6 +17,11 @@
         android:icon="@mipmap/ic_launcher"
         android:title="Book"
         android:visible="true"/>
+    <item
+        android:id="@+id/id4"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Status"
+        android:visible="true"/>
     <!--TODO:unhide this chat option when required-->
 
 

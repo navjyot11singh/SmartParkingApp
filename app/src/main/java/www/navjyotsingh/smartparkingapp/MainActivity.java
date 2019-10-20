@@ -13,12 +13,18 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import www.navjyotsingh.smartparkingapp.fragment.FindFragment;
+import www.navjyotsingh.smartparkingapp.fragment.HistoryFragment;
 import www.navjyotsingh.smartparkingapp.fragment.SearchParkingFragment;
+import www.navjyotsingh.smartparkingapp.fragment.fragmentbooked;
+import www.navjyotsingh.smartparkingapp.fragment.searchfragment;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private SearchParkingFragment searchParkingFragment = new SearchParkingFragment();
-    private FindFragment findFragment = new FindFragment();
+    //    private FindFragment findFragment = new FindFragment();
+    private searchfragment searchfragment = new searchfragment();
+    private HistoryFragment historyFragment = new HistoryFragment();
+    private fragmentbooked fragmentbooked = new fragmentbooked();
     private BottomNavigationView mBottomNavigation;
     private Fragment activeFragment = null;
     private FragmentManager manager;
@@ -54,14 +60,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 .commit();
 
         manager.beginTransaction()
-                .add(R.id.parentLayout, findFragment)
-                .hide(findFragment)
+                .add(R.id.parentLayout, searchfragment)
+                .hide(searchfragment)
                 .commit();
 
-//        manager.beginTransaction()
-//                .add(R.id.parentLayout, hsPotCalmingActivitesFragment)
-//                .hide(hsPotCalmingActivitesFragment)
-//                .commit();
+        manager.beginTransaction()
+                .add(R.id.parentLayout, historyFragment)
+                .hide(historyFragment)
+                .commit();
+
+        manager.beginTransaction()
+                .add(R.id.parentLayout, fragmentbooked)
+                .hide(fragmentbooked)
+                .commit();
 //
 //        manager.beginTransaction()
 //                .add(R.id.parentLayout, chatFragment)
@@ -95,18 +106,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
             case R.id.id2:
                 clearBackStack();
-                showHideFragment(findFragment);
-                activeFragment = findFragment;
+                showHideFragment(searchfragment);
+                activeFragment = searchfragment;
                 break;
 
-//            case R.id.id3:
-//                clearBackStack();
-//                FragmenCheck.ActivityFragment = "1";
-//                Log.d("VALUE", FragmenCheck.ActivityFragment);
-//                showHideFragment(hsPotCalmingActivitesFragment);
-////                FragmenCheck.ActivityFragment="1";
-//                activeFragment = hsPotCalmingActivitesFragment;
-//                break;
+            case R.id.id3:
+                clearBackStack();
+                showHideFragment(historyFragment);
+//                FragmenCheck.ActivityFragment="1";
+                activeFragment = historyFragment;
+                break;
+            case R.id.id4:
+                clearBackStack();
+                showHideFragment(fragmentbooked);
+//                FragmenCheck.ActivityFragment="1";
+                activeFragment = fragmentbooked;
+                break;
 
         }
         return true;

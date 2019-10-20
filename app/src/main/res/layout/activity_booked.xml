@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="@dimen/_3sdp"
+                android:elevation="@dimen/_20sdp"
+
+                android:layout_margin="@dimen/_15sdp"
+                android:id="@+id/card2"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dotted"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardCornerRadius="@dimen/_3sdp"
+                        android:elevation="@dimen/_20sdp"
+                        android:id="@+id/car1"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/line"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/txt_date"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:text="23rd July 19"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorDark"
+                                android:gravity="center"
+
+                                />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorDark"
+
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:id="@+id/txt_time"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:text="12:12 PM"
+                                android:gravity="center"
+                                android:textSize="@dimen/_15sdp"
+                                android:textColor="@color/colorDark"
+                                android:textStyle="bold"
+
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:gravity="end|center_vertical"
+                            android:fontFamily="@font/avenirltstd_light"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/colorDark"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:text="Status : "
+                            android:textSize="@dimen/_10sdp"
+
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:gravity="start|center_vertical"
+                            android:fontFamily="@font/avenirltstd_light"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/colorRed"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="Exit"
+                            android:textSize="@dimen/_10sdp"
+
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenirltstd_light"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorDark"
+                        android:textStyle="bold"
+                        android:text="Parking Lot Details"
+                        android:textSize="@dimen/_13sdp"
+
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            >
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
+
+
+
+
+                                />
+
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="3"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Name : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="JanakPuri Location"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Address"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="abcd"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenirltstd_light"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorDark"
+                        android:textStyle="bold"
+                        android:text="Vehicle Details"
+                        android:textSize="@dimen/_13sdp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:orientation="vertical"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+
+                            >
+                            <ImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                />
+
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="2"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Vehicle Name : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="WagonR"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Vehicle Number : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="DL 8C 235"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenirltstd_light"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorDark"
+                        android:textStyle="bold"
+                        android:text="Transaction Details"
+                        android:textSize="@dimen/_13sdp"
+
+
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_70sdp"
+
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:src="@drawable/qr"
+
+
+                            />
+
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="2"
+                        android:layout_marginBottom="@dimen/_10sdp"
+
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="Cost : "
+                                android:gravity="center"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorDark"
+
+
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="10/-"
+                                android:gravity="center"
+
+
+                                android:textColor="@color/colorDark"
+
+
+                                />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="Transaction ID : "
+                                android:gravity="center"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorDark"
+
+
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="1234ABCD"
+                                android:gravity="center"
+
+
+                                android:textColor="@color/colorDark"
+
+
+                                />
+
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/card2"
+
+                android:background="@color/colorWhite"
+
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_alignParentBottom="true"
+
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    app:cardBackgroundColor="@color/colorAccent"
+
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    >
+
+
+                    <Button
+                        android:id="@+id/btn_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+
+                        android:background="@color/colorRed"
+                        android:text="Not Paid"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

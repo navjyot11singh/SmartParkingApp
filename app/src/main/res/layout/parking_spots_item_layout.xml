@@ -24,6 +24,8 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/parkingImage"
+                    android:scaleType="fitXY"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_centerInParent="true"
@@ -78,9 +80,10 @@
                             android:layout_height="20dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="10dp"
-                            android:src="@mipmap/ic_launcher" />
+                            android:src="@drawable/ic_location" />
 
                         <TextView
+                            android:id="@+id/distanceTv"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"

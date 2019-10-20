@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,6 +41,10 @@ public class ParkingLotsAdapter extends RecyclerView.Adapter<ParkingLotsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+        holder.parkingImage.setImageResource(list.get(position).getImages());
+        holder.txt_parkinglotName.setText(list.get(position).getParkingLotName());
+        holder.ParkingAddress.setText(list.get(position).getAddress());
+        holder.distanceTv.setText(list.get(position).getDistance());
         holder.parking_spot_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,10 +61,18 @@ public class ParkingLotsAdapter extends RecyclerView.Adapter<ParkingLotsAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder  {
 
+        private ImageView parkingImage;
+        private TextView txt_parkinglotName;
+        private TextView ParkingAddress;
+        private TextView distanceTv;
         private LinearLayout parking_spot_item;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             parking_spot_item = itemView.findViewById(R.id.parking_spot_item);
+            parkingImage = itemView.findViewById(R.id.parkingImage);
+            txt_parkinglotName = itemView.findViewById(R.id.txt_parkinglotName);
+            ParkingAddress = itemView.findViewById(R.id.ParkingAddress);
+            distanceTv = itemView.findViewById(R.id.distanceTv);
 
         }
 
